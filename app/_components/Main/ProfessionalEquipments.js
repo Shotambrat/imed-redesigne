@@ -113,15 +113,15 @@ const equipmentData = [
 
 const categories = [
   {
-    title: "All Equipment",
+    title: "Все товары",
     slug: "all",
   },
   {
-    title: "New Items",
+    title: "Новинки",
     slug: "new",
   },
   {
-    title: "Promotions",
+    title: "Акции",
     slug: "promotions",
   },
 ];
@@ -130,7 +130,7 @@ const EquipmentCarousel = () => {
   const [filteredData, setFilteredData] = useState(equipmentData);
   const [selectedCategory, setSelectedCategory] = useState("all");
 
-  const handleCategoryClick = (category) => {
+  const handleFilter = (category) => {
     setSelectedCategory(category);
     if (category === "all") {
       setFilteredData(equipmentData);
@@ -178,24 +178,27 @@ const EquipmentCarousel = () => {
 
   return (
     <section className="w-full max-w-[1440px] mx-auto flex flex-col gap-8 px-2">
-      <h2 className="text-3xl max-mdx:text-2xl font-bold">
-        PROFESSIONAL MEDICAL EQUIPMENT
+      <h2 className="text-4xl max-mdx:text-2xl font-semibold">
+        ПОПУЛЯРНЫЕ ТОВАРЫ
       </h2>
-      <div className="w-full flex flex-col gap-2">
-        <div className="flex gap-2 overflow-x-scroll no-scrollbar">
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              onClick={() => handleCategoryClick(category.slug)}
-              className={`text-sm font-semibold px-4 py-2 whitespace-nowrap transition-all duration-200 rounded-full ${
-                selectedCategory === category.slug
-                  ? "bg-greenView text-white"
-                  : "text-gray-600 bg-slate-100 hover:bg-greenView hover:text-white"
-              }`}
-            >
-              {category.title}
-            </button>
-          ))}
+      <div className="w-full items-start flex flex-col gap-2">
+        <div className="flex flex-col relative">
+          <div className="overflow-x-scroll flex gap-4 lg:gap-6 scrollbar-hide touch-auto">
+            {categories.map((item, index) => (
+              <button
+                onClick={() => handleFilter(item.slug)}
+                key={index}
+                className={`z-10 w-auto text-lg transition-text font-semibold ${
+                  selectedCategory == item.slug
+                    ? "text-redMain border-b-2 border-b-redMain"
+                    : "text-neutral-400"
+                }`}
+              >
+                <h3 className="my-2 whitespace-nowrap">{item.title}</h3>
+              </button>
+            ))}
+          </div>
+          <hr className="w-full border-t-2 absolute bottom-0 border-slate-300" />
         </div>
         <div className="w-full px-4">
           <Slider {...settings} className="h-auto flex">
@@ -216,11 +219,8 @@ const EquipmentCarousel = () => {
         </div>
       </div>
       <div className="flex w-full justify-center">
-        <Link
-          href="/categories"
-          className="border border-greenView rounded-xl px-12 py-3"
-        >
-          <GreenArrow title={"All products"} />
+        <Link href="/categories" className="border px-12 py-3">
+          Все товары
         </Link>
       </div>
     </section>

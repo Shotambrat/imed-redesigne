@@ -8,9 +8,9 @@ const Header = dynamic(() => import('@/app/_components/Header/Header'), { ssr: t
 export const metadata = {
   title: {
     template: "%s",
-    default: "MRJ Trade"
+    default: "Intermed Innovation"
   },
-  description: "MRJ Trade in UAE"
+  description: "Intermed Inoovation in Uzbekistan"
 }
 
 export default function RootLayout({ children }) {

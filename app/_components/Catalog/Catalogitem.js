@@ -30,29 +30,29 @@ export default function Catalogitem({ new: isNew, sale, image, title, descriptio
 
   return (
     <div className="h-[450px] w-full">
-      <div className="border border-neutral-300 rounded-2xl p-4 pt-8 flex flex-col h-full relative">
-        <div className="absolute top-2 left-2 flex gap-1">
-          {isNew && (
-            <div className="py-1 px-2 font-semibold rounded-full text-xs text-greenView bg-green-100">
-              New
-            </div>
-          )}
-          {sale && (
-            <div className="py-1 px-2 font-semibold rounded-full text-xs text-red-500 bg-red-100">
-              {sale}
-            </div>
-          )}
-        </div>
-        <div onClick={handleFavoriteToggle} className="absolute top-4 right-4">
+      <div className="rounded-2xl p-4 pt-8 flex flex-col h-full relative">
+        <div onClick={handleFavoriteToggle} className="absolute top-4 right-4 z-10">
           <Image
             src={isFavorite ? favFilled : fav}
             width={100}
             height={100}
             alt="Favorite Icon"
-            className="w-5 h-5 max-mdx:w-8 max-mdx:h-8"
+            className="w-6 h-6 max-mdx:w-8 max-mdx:h-8"
           />
         </div>
-        <div className="w-full h-[300px] flex items-center justify-center overflow-hidden">
+        <div className="w-full h-[300px] flex items-center justify-center relative overflow-hidden">
+        <div className="absolute bottom-2 left-2 flex gap-1">
+          {isNew && (
+            <div className="py-1 px-3 rounded-full text-md font-bold text-red-500 bg-red-100">
+              Новинка
+            </div>
+          )}
+          {sale && (
+            <div className="py-1 px-3 rounded-full text-md font-bold text-red-500 bg-red-100">
+              {sale}
+            </div>
+          )}
+        </div>
           <Image
             src={image}
             alt={title}
@@ -62,10 +62,10 @@ export default function Catalogitem({ new: isNew, sale, image, title, descriptio
           />
         </div>
         <h3 className="text-md font-semibold mt-3">{title}</h3>
-        <p className="text-xs text-gray-600 mt-1">{description}</p>
+        <p className="text-xs text-neutral-300 mt-1">{description}</p>
         <div className="flex w-full justify-between items-center flex-wrap mt-3">
           <Link href={`/product/${slug}`}>
-            <GreenArrow title={"more details"} />
+            <GreenArrow title={"Подробнее"} />
           </Link>
           {price && (
             <div className="py-1 px-2 font-semibold rounded-full text-greenView">

@@ -9,22 +9,22 @@ import GreenArrow from "../Buttons/GreenArrow";
 export default function Equipments() {
   const data = [
     {
-      title: "Ultrasound Diagnostic System",
+      title: "УЗД оборудование",
       imageSrc: uzi,
       slug: "ultrasound"
     },
     {
-      title: "Laboratory Equipment",
+      title: "Лабораторное оборудование",
       imageSrc: lab,
       slug: "lab"
     },
     {
-      title: "Reagents and consumables",
+      title: "Реагенты и расходные материалы",
       imageSrc: colba,
       slug: "reagents"
     },
     {
-      title: "Radiology and X-ray systems",
+      title: "Радиология",
       imageSrc: radio,
       slug: "radiology"
     },
@@ -32,7 +32,7 @@ export default function Equipments() {
   return (
     <div className="w-full max-w-[1440px] mx-auto px-2 flex flex-col gap-8">
       <h2 className="text-3xl max-mdl:text-2xl font-bold">
-        EQUIPMENT CATEGORIES
+        КАТАЛОГ
       </h2>
       <div className="w-full grid grid-cols-1 mdl:grid-cols-2 xl:grid-cols-4 gap-4">
         {data.map((item, i) => (
@@ -40,8 +40,8 @@ export default function Equipments() {
         ))}
       </div>
       <div className="w-full flex justify-center">
-        <Link href={'/categories'} className="rounded-xl border border-neutral-300 px-12 py-3 hover:bg-green-100 hover:border-green-800 transition-all duration-200">
-            <GreenArrow title={'All categories'} />
+        <Link href={'/categories'} className=" border border-neutral-300 px-12 py-3 transition-all duration-200">
+            Все категории
         </Link>
       </div>
     </div>

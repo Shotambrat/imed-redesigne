@@ -96,5 +96,44 @@ body {
 }
 
 .shadow-contactPages {
-  box-shadow: 0px -4px 40px rgba(0, 0, 0, 0.10); /* Тень сверху */
+  box-shadow: 0px -4px 40px rgba(0, 0, 0, 0.10);
+  /* Тень сверху */
+}
+
+.swiper-pagination-bullet {
+  background: rgb(175, 172, 172);
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: red;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: black !important;
+  width: 30px;
+  /* Adjust the width as needed */
+  height: 30px;
+  /* Adjust the height as needed */
+}
+
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 20px;
+  font-weight: bolder;
+  /* Adjust the font size as needed */
+}
+
+@media (max-width: 1000px) {
+  .relative {
+    height: 0;
+    padding-bottom: 100%; /* Aspect ratio 1:1 (square) */
+  }
+
+  .relative iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }

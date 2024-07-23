@@ -39,16 +39,14 @@ export default function Application() {
   };
 
   return (
-    <div className="w-full max-w-[1440px] max-auto px-2 mx-auto">
-      <div className="w-full rounded-3xl flex flex-col max-lg:gap-8 lg:flex-row bg-snowy px-4 py-8 lg:px-12 lg:py-12 relative overflow-hidden">
+    <div className="w-full max-auto mx-auto">
+      <div className="w-full flex flex-col max-lg:gap-8 lg:flex-row bg-contactBg px-4 py-8 lg:px-12 lg:py-12 relative overflow-hidden">
         <div className="flex-1 w-full flex flex-col gap-5 z-10">
-          <h2 className="text-4xl max-mdx:text-2xl text-greenView font-semibold">
-            HAVE A QUESTION? <br />
-            CONTACT US!
+          <h2 className="text-4xl max-mdx:text-2xl text-greenView text-white font-semibold">
+            
+            ОСТАЛИСЬ ВОПРОСЫ? <br />
+СВЯЖИТЕСЬ В НАМИ!
           </h2>
-          <p className="text-neutral-500 w-full max-w-[350px] text-lg leading-6">
-            Write your question and we will answer you as soon as possible
-          </p>
         </div>
         <div className="z-10 flex-1 w-full flex justify-center">
           <form className="flex flex-col gap-6 w-full max-lg:max-w-full max-w-[350px]">
@@ -123,7 +121,6 @@ export default function Application() {
             </div>
           </form>
         </div>
-        <div className="absolute -bottom-48 mdl:-left-20 max-mdl:-right-20 border-2 border-greenView opacity-30 rounded-full w-80 h-80 z-0"></div>
       </div>
     </div>
   );

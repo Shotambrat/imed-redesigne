@@ -6,29 +6,33 @@ import Tools from "@/app/_components/Header/Tools";
 export default function Header() {
   const data = [
     {
-        title: 'Categories',
-        slug: 'categorie',
+        title: 'Каталог',
+        slug: 'categories',
     },
     {
-        title: 'About us',
+        title: 'О компании',
         slug: 'about',
     },
     {
-        title: 'Partners',
+        title: 'Партнеры',
         slug: 'partners',
     },
     {
-        title: 'News',
+        title: 'Новости',
         slug: 'news',
     },
     {
-        title: 'Contacts',
+        title: 'Клиенты',
+        slug: 'clients',
+    },
+    {
+        title: 'Контакты',
         slug: 'contacts',
     },
 ]
   return (
     <header className="w-full bg-white py-4 px-2 h-[90px] max-mdx:h-[70px] shadow-2xl">
-      <div className="w-full max-w-[1440px] flex justify-between gap-2 h-full mx-auto">
+      <div className="w-full max-w-[1440px] flex items-center justify-between gap-2 h-full mx-auto">
         <Logo />
         <Navigation navOptions={data}/>
         <Tools navOptions={data}/>
