@@ -1,9 +1,9 @@
-import logoBig from "@/public/images/footer/mrj-logo-big.png";
+import logoBig from "@/public/images/intermed-logo.png";
 import telegram from "@/public/images/footer/telegram.png";
 import facebook from "@/public/images/footer/facebook.png";
 import instagram from "@/public/images/footer/instagram.png";
 import youtube from "@/public/images/footer/youtube.png";
-import arrowRight from "@/public/svg/arrow-right-green.svg";
+import arrowRight from "@/public/svg/arrow-right-red.svg";
 import resultLogo from "@/public/images/footer/result-logo.png";
 import Link from "next/link";
 
@@ -14,21 +14,17 @@ export default function Footer() {
     <div className="bg-snowy w-full px-2 pt-12">
       <div className="w-full max-w-[1440px] flex flex-col gap-12 mx-auto">
         <div className="w-full flex justify-between max-lg:flex-col gap-12">
-          <div className="flex lg:flex-col max-lg:justify-between max-mdl:flex-col gap-5">
-            <div className="flex flex-col gap-5">
+          <div className="flex lg:flex-col max-lg:justify-between flex-col  gap-5">
+            <div className="flex flex-col gap-5 ">
               <Link href="/">
                 <Image
                   src={logoBig}
                   width={500}
                   height={500}
                   alt="Mrj Logo Big"
-                  className="w-36 "
+                  className="w-48 "
                 />
               </Link>
-              <p className="w-full max-w-72 font-semibold leading-5">
-                Reliable partner in the field of medical equipment distribution
-                in UAE
-              </p>
             </div>
             <div className="flex gap-3">
               <a href="/" target="_blank">
@@ -70,17 +66,17 @@ export default function Footer() {
             </div>
           </div>
           <div className="lg:w-1/2 w-full flex max-mdx:gap-5">
-            <div className="flex-1 flex flex-col text-sm gap-4 font-semibold">
-              <h2 className="text-lg font-semibold text-green-700">CATALOG</h2>
-              <a href="/category">Ultrasound Diagnostic System</a>
-              <a href="/category">Laboratory Equipment</a>
-              <a href="/category">Reagents and Consumables</a>
-              <a href="/category">Radiology/X-ray systems</a>
+            <div className="flex-1 flex flex-col text-sm gap-4 text-[#808080] lg:pr-7">
+              <h2 className="text-lg font-semibold text-[#252324] uppercase">Каталог</h2>
+              <a href="/category">УЗД оборудование</a>
+              <a href="/category">Жизнеобеспечение и <brd/>мониторинг паицента</a>
+              <a href="/category">Лабораторное оборудование</a>
+              <a href="/category">Реагенты и расходные материалы</a>
               <a
                 href="/category"
                 className="flex gap-2 hover:gap-4 items-center transition-all duration-200"
               >
-                <p className="text-green-700 ">View all</p>
+                <p className="text-redMain ">Все категории</p>
                 <Image
                   src={arrowRight}
                   width={100}
@@ -90,20 +86,20 @@ export default function Footer() {
                 />
               </a>
             </div>
-            <div className="flex-1 flex flex-col text-sm gap-4 font-semibold">
-              <h2 className="text-lg font-semibold text-green-700">COMPANY</h2>
-              <a href="/about">About Us</a>
-              <a href="/partners">Partners</a>
-              <a href="/contacts">Contacts</a>
-              <a href="/news">News</a>
+            <div className="flex-1 flex flex-col text-sm gap-4  text-[#808080]">
+              <h2 className="text-lg font-semibold text-[#252324] uppercase">Компания</h2>
+              <a href="/about">О компании</a>
+              <a href="/partners">Партнеры</a>
+              <a href="/contacts">Контакты</a>
+              <a href="/news">Новости</a>
             </div>
           </div>
         </div>
         <div className="w-full ">
           <hr />
           <div className="my-6 w-full flex justify-between items-center">
-            <p className="w-full max-mdx:max-w-[150px]">
-              2024 © MRJ Trade. All rights reserved
+            <p className="w-full max-mdx:max-w-[150px] text-[#808080]">
+              2024 © Intermed Innovation. Все права защищены
             </p>
             <a href="https://result-me.uz" target="_blank">
               <Image

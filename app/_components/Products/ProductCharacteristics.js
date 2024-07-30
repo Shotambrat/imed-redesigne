@@ -1,18 +1,20 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
+import mindray from "@/public/images/aboutUs/partners/image58.png";
+import arrowred from "@/public/svg/arrow-right-red.svg";
 
 export default function ProductCharacteristics() {
-
   const data = [
     {
       category: 'description',
-      title: 'Description',
+      title: 'Описание',
       desc: true,
-      data: 'The Resona R9 by Mindray is a premium ultrasound system designed for high precision in both routine and complex diagnostic and interventional procedures. Leveraging advanced ZONE Sonography Technology (ZST+), it enhances ultrasound image quality through sophisticated zone acquisition and channel data processing. The Resona R9 is equipped with state-of-the-art imaging tools, such as iClear+ for higher signal-to-noise ratio and reduced speckle noise, UWN Contrast Imaging, Plane-Wave-Based CEUS, Micro Flow Enhancement, and High Frame Rate CEUS (HiFR CEUS). These features facilitate more accurate and confident diagnoses and interventions.'
+      data: 'Основной предшествующей моделью Mindray Resona R9 является УЗИ аппарат Resona 7, а референсными аппаратами – Mindray DC-80, M6, MX7, M9, а также Samsung RS85, Esaote MyLab Twice, Philips EPIQ 7, Supersonic Aixplorer, GE Logiq E9 и Voluson E8, Mindray TE7 и DC-80A. Режимы визуализации на УЗИ аппарате Mndray Resona R9: В, М, цветной М-режим, цветной допплер, амплитудный допплер, PWD, CWD, комбинированные режимы (B+M, PW+B, Color+B, Power+B, PW+Color+B, Power+PW+B), TDI, Smart 3D, 4D, iScape View, THI, Эластография, контрастирование, STQ, STE, V Flow. Точно такие же режимы доступны на УЗИ аппарате Resona 7'
     },
     {
       category: 'characteristics',
-      title: 'Characteristics',
+      title: 'Характеристики',
       desc: false,
       data: [
         {
@@ -57,7 +59,34 @@ export default function ProductCharacteristics() {
           ]
         },
       ]
-    }
+    },
+    {
+      category: 'client',
+      title: 'Клиент',
+      desc: false,
+      data: [
+        {
+          name: 'Vitamed Medical',
+          description: 'VITAMED - это современный, уникальный, многопрофильный медицинский центр с широким спектр...',
+          logo: mindray,
+        },
+        {
+          name: 'Akfa Medline',
+          description: 'AKFA Medline University Hospital (AMUH) - это медицинское учреждение с высококвалифицированными специали...',
+          logo: mindray,
+        },
+        {
+          name: 'ZARMED PRATIKSHA',
+          description: 'ZARMED PRATIKSHA Bogi’shamol - первая клиника в Самарканде, которая является образцом высокоэтичной стациона...',
+          logo: mindray,
+        },
+        {
+          name: 'Fergana Premium Medical',
+          description: 'Многопрофильный медицинский центр Fergana Premium Medical оказывает качественные лечеб...',
+          logo: mindray,
+        }
+      ]
+    },
   ];
 
   const [active, setActive] = useState(data[0].category);
@@ -78,11 +107,10 @@ export default function ProductCharacteristics() {
               <button
                 onClick={() => handleFilter(item.category)}
                 key={index}
-                className={`z-10 w-auto text-lg transition-text font-medium ${
-                  active == item.category
-                    ? "text-greenView border-b-2 border-b-greenView"
-                    : "text-neutral-400"
-                }`}
+                className={`z-10 w-auto text-lg transition-text font-medium ${active == item.category
+                  ? "text-[#E31E24] border-b-2 border-b-[#E31E24]"
+                  : "text-neutral-400"
+                  }`}
               >
                 <h3 className="my-2 whitespace-nowrap">{item.title}</h3>
               </button>
@@ -96,18 +124,42 @@ export default function ProductCharacteristics() {
           <p className="text-lg leading-5">{filtered.data}</p>
         ) : (
           <div className="flex flex-col gap-6 w-full">
-            {filtered.data.map((item, i) => (
-              <div key={i} className="w-full flex gap-3">
-                <p className="w-full text-neutral-400 max-w-[100px] md:max-w-[150px] mdx:max-w-[200px] lg:max-w-[400px]">
-                  {item.title}
-                </p>
-                <div className="flex w-full flex-col">
-                  {item.data.map((subitem, j) => (
-                    <p key={j}>{subitem}</p>
-                  ))}
+            {filtered.category === 'characteristics' ? (
+              filtered.data.map((item, i) => (
+                <div key={i} className="w-full flex gap-3">
+                  <p className="w-full text-neutral-400 max-w-[100px] md:max-w-[150px] mdx:max-w-[200px] lg:max-w-[400px]">
+                    {item.title}
+                  </p>
+                  <div className="flex w-full flex-col">
+                    {item.data.map((subitem, j) => (
+                      <p key={j}>{subitem}</p>
+                    ))}
+                  </div>
                 </div>
+              ))
+            ) : (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                {filtered.data.map((client, index) => (
+                  <div key={index} className="border  p-4 ">
+
+                    <div className="flex flex-col items-center mdx:flex-row">
+                      <Image src={client.logo} alt={client.name} className="w-full max-w-[320px] h-auto mb-2 p-5 object-contain lg:max-w-[340px]" />
+                      <div className="mt-2">
+                        <h3 className="font-bold text-lg mdx:text-2xl mdx:mb-2">{client.name}</h3>
+                        <p className="text-[#808080] mdx:mb-4">{client.description}</p>
+                        <button className="text-[#E31E24] mt-2 flex items-center">Подробнее <Image
+                          src={arrowred}
+                          width={100}
+                          height={100}
+                          alt="Heart Icon"
+                          className="w-5 h-5"
+                        /></button>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            )}
           </div>
         )}
       </div>

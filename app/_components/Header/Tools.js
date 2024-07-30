@@ -41,15 +41,23 @@ export default function Tools({ navOptions }) {
           />
         </button>
       </Link>
-        <a href="tel:+998990909095" className="rounded-full max-mdx:px-3 max-mdx:py-3">
-          <Image
-            src={phoneIcon}
-            height={100}
-            width={100}
-            alt={`Tools Item HeartIcon : Favorites`}
-            className="w-6 h-6 max-mdx:w-3 max-mdx:h-3"
-          />
-        </a>
+      <a href="tel:+998990909095" className="rounded-full max-mdx:px-3 max-mdx:py-3">
+        <Image
+          src={phoneIcon}
+          height={100}
+          width={100}
+          alt={`Tools Item HeartIcon : Favorites`}
+          className="w-6 h-6 max-mdx:w-3 max-mdx:h-3"
+        />
+      </a>
+      <div class="relative  flex items-center text-left">
+        <button id="dropdownButton" class="inline-flex items-center text-[18px] font-medium  bg-white   focus:outline-none ml-3">
+          RU
+          <svg class="w-5 h-5 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+          </svg>
+        </button>
+      </div>
       <button
         onClick={handleOpenMenu}
         className="2xl:hidden"

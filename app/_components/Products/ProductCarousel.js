@@ -24,14 +24,14 @@ const VerticalCarousel = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-8 w-full max-w-[1440px] mx-auto px-2">
+    <div className="flex flex-col w-full max-w-[1440px] mx-auto px-2 mb-4">
       <div className="flex gap-4 lg:hidden">
         <h1 className="text-3xl font-semibold">RESONA R9</h1>
-        <div className="py-2 px-5 font-bold rounded-full text-greenView bg-greenCategory">
-          New
+        <div className="py-2 px-5 font-bold rounded-full text-redMain bg-[#FCE8E9]">
+          Новинка
         </div>
       </div>
-      <div className="w-full">
+      <div className="w-full h-auto">
         <Carousel
           selectedItem={selectedImage}
           onChange={(index) => setSelectedImage(index)}
@@ -54,7 +54,7 @@ const VerticalCarousel = () => {
           ))}
         </Carousel>
       </div>
-      <div className="w-full max-w-[550px] mt-4 flex justify-center h-[200px]">
+      <div className="w-full max-w-[550px] mt-4 flex justify-center h-auto">
         <Carousel
           selectedItem={selectedImage}
           onChange={(index) => setSelectedImage(index)}
@@ -74,7 +74,7 @@ const VerticalCarousel = () => {
             <div
               key={index}
               onClick={() => setSelectedImage(index)}
-              className={`cursor-pointer ml-2 h-[60%] rounded-xl ${
+              className={`cursor-pointer ml-2 h-[100%] rounded-xl ${
                 selectedImage === index ? "border-2 border-greenView" : "border"
               }`}
             >

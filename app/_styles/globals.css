@@ -124,10 +124,10 @@ body {
 }
 
 @media (max-width: 1000px) {
-  .relative {
+  /* .relative {
     height: 0;
-    padding-bottom: 100%; /* Aspect ratio 1:1 (square) */
-  }
+    padding-bottom: 100%; 
+  } */
 
   .relative iframe {
     position: absolute;

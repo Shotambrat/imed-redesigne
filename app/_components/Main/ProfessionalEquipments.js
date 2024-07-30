@@ -188,11 +188,10 @@ const EquipmentCarousel = () => {
               <button
                 onClick={() => handleFilter(item.slug)}
                 key={index}
-                className={`z-10 w-auto text-lg transition-text font-semibold ${
-                  selectedCategory == item.slug
+                className={`z-10 w-auto text-lg transition-text font-semibold ${selectedCategory == item.slug
                     ? "text-redMain border-b-2 border-b-redMain"
                     : "text-neutral-400"
-                }`}
+                  }`}
               >
                 <h3 className="my-2 whitespace-nowrap">{item.title}</h3>
               </button>

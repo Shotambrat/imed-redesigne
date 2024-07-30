@@ -12,26 +12,18 @@ export default function ProductPreview() {
       <div className="w-full flex-1 flex flex-col gap-5">
         <div className="flex gap-4 max-lg:hidden">
           <h1 className="text-3xl font-semibold">RESONA R9</h1>
-          <div className="py-2 px-5 font-bold rounded-full text-greenView bg-greenCategory">
-            New
+          <div className="py-2 px-5 font-bold rounded-full text-[#E31E24] bg-[#FCE8E9]">
+            Новинка
           </div>
         </div>
-        <p className="text-neutral-400 leading-5">
-          The Resona R9 by Mindray is a premium ultrasound system designed for
-          high precision in both routine and complex diagnostic and
-          interventional procedures. Leveraging advanced ZONE Sonography
-          Technology (ZST+), it enhances ultrasound image quality through
-          sophisticated zone acquisition and channel data processing. The Resona
-          R9 is equipped with state-of-the-art imaging tools, such as iClear+
-          for higher signal-to-noise ratio and reduced speckle noise, UWN
-          Contrast Imaging, Plane-Wave-Based CEUS, Micro Flow Enhancement, and
-          High Frame Rate CEUS (HiFR CEUS). These features facilitate more
-          accurate and confident diagnoses and interventions
+        <p className="text-neutral-500 leading-5">
+          Основной предшествующей моделью Mindray Resona R9 является УЗИ аппарат Resona 7, а референсными аппаратами – Mindray DC-80, M6, MX7, M9, а также Samsung RS85, Esaote MyLab Twice, Philips EPIQ 7, Supersonic Aixplorer, GE Logiq E9 и Voluson E8, Mindray TE7 и DC-80A.
+          Режимы визуализации на УЗИ аппарате Mndray Resona R9: В, М, цветной М-режим, цветной допплер, амплитудный допплер, PWD, CWD, комбинированные режимы (B+M, PW+B, Color+B, Power+B, PW+Color+B, Power+PW+B), TDI, Smart 3D, 4D, iScape View, THI, Эластография, контрастирование, STQ, STE, V Flow
         </p>
         <hr />
         <div className="w-full flex justify-between items-center">
-          <p className="w-full max-w-[200px] leading-4">
-            {`Manufacturer's Warranty Technical support`}
+          <p className="w-full max-w-[220px] leading-4">
+            {`Гарантия от производителя Техническая поддержка`}
           </p>
           <Image
             src={mindray}
@@ -42,10 +34,10 @@ export default function ProductPreview() {
           />
         </div>
         <div className="flex gap-4">
-          <button className="px-4 py-3 text-sm font-semibold text-white rounded-xl bg-greenView">
-            Send a commercial offer
+          <button className="py-4 px-[60px] text-sm font-semibold text-white bg-[#E94B50] lg:px-[80px] 2xl:px-[90px]">
+            Отправить КП
           </button>
-          <div className="px-3 py-3 border rounded-xl flex items-center justify-center">
+          <button className="px-3 py-3 border flex items-center justify-center">
             <Image
               src={heartIcon}
               width={100}
@@ -53,7 +45,7 @@ export default function ProductPreview() {
               alt="Heart Icon"
               className="w-5 h-5"
             />
-          </div>
+          </button>
         </div>
       </div>
     </div>

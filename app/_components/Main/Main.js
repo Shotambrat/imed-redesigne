@@ -1,6 +1,7 @@
 import Banner from "@/app/_components/Main/Banner";
 import Equipments from "@/app/_components/Main/Equipments";
 import Scheme from "@/app/_components/Main/Scheme";
+import FullEquipment from "@/app/_components/Main/FullEquipment";
 import ProfessionalEquipments from "@/app/_components/Main/ProfessionalEquipments";
 import AboutUs from "@/app/_components/Main/AboutUs";
 import Application from "./Application";
@@ -17,6 +18,7 @@ export default function Main() {
       <ProfessionalEquipments />
       <Equipments />
       <AboutUs />
+      <FullEquipment />
       <Scheme />
       <Sertificates />
       <Partners />

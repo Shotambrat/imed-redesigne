@@ -88,7 +88,7 @@ export default function Similar() {
   return (
     <section className="w-full max-w-[1440px] mx-auto flex flex-col gap-8 px-2">
       <h2 className="text-3xl max-mdx:text-2xl font-bold">
-        SIMILAR PRODUCTS
+        ПОХОЖИЕ ПРОДУКТЫ
       </h2>
       <div className="w-full">
         <div className="w-full px-4">
@@ -111,9 +111,9 @@ export default function Similar() {
       <div className="flex w-full justify-center">
         <Link
           href="/categories"
-          className="border border-greenView rounded-xl px-12 py-3 hover:bg-greenCategory transition-all duration-200"
+          className="border border-greenView rounded-xl px-12 py-3 hover:bg-[#F9D2D3] transition-all duration-200 hover:text-[#EE787C]"
         >
-          <GreenArrow title={"View all"} />
+          Все товары
         </Link>
       </div>
     </section>

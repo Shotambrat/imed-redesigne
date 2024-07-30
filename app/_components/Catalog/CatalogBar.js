@@ -13,7 +13,7 @@ const AccordionItem = ({ title, isOpen, onClick, children }) => {
       <summary
         onClick={onClick}
         className={`flex gap-5 py-7 ${
-          isOpen ? "text-greenView" : "text-black"
+          isOpen ? "text-redMain" : "text-black"
         } font-semibold text-xl  max-md:max-w-full cursor-pointer`}
       >
         <span className="flex-auto">{title}</span>
@@ -59,45 +59,51 @@ const AccordionContent = ({ children }) => {
 const data = [
   {
     id: 1,
-    name: "Ultrasound Diagnostic Systems",
+    name: "УЗД оборудование",
     slug: "1-ultrasound-diagnostic-systems",
     active: true,
     catalogList: [
       {
         id: 4,
-        name: "Portable",
+        name: "Стационарные",
         slug: "4-portable",
         active: true,
       },
       {
         id: 2,
-        name: "Stationary",
+        name: "Портативные",
         slug: "2-stationary",
+        active: true,
+      },
+      {
+        id: 3,
+        name: "Фибросканы",
+        slug: "3-fibrocsani",
         active: true,
       },
     ],
   },
   {
     id: 2,
-    name: "Laboratory Equipment",
+    name: "Лабороторное оборудование",
     slug: "2-laboratory-equipment",
     active: true,
     catalogList: [
       {
         id: 3,
-        name: "Portable",
+        name: "Портативные",
         slug: "3-portable",
         active: true,
       },
     ],
   },
-  {
-    id: 3,
-    name: "Single Equipment",
-    slug: "3-single-equipment",
-    active: true,
-    catalogList: [],
-  },
+  // {
+  //   id: 3,
+  //   name: "Single Equipment",
+  //   slug: "3-single-equipment",
+  //   active: true,
+  //   catalogList: [],
+  // },
 ];
 
 export default function CatalogList() {
@@ -123,7 +129,7 @@ export default function CatalogList() {
                 onClick={() => toggleSection(id)}
               >
                 <AccordionContent>
-                  <div className="flex flex-col gap-5 text-lg font-semibold text-neutral-900 w-full">
+                  <div className="flex flex-col gap-5 text-lg font-semibold text-[#252324] w-full">
                     {catalogList.map(
                       (catalogItem) =>
                         catalogItem.active && (

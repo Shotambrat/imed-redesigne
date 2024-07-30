@@ -1,35 +1,12 @@
 
-// import Image from "next/image";
 
-// export default function Partners() {
-  
-
-//   return (
-  //     <div className="max-w-[1440px] mx-auto px-2">
-  //       <div className="text-2xl mb-8 mdx:text-3xl font-semibold">OUR PARTNERS</div>
-  //       <div className="relative grid grid-cols-2 xl:grid-cols-3">
-  //         <div className="absolute h-[98%] w-[99%] border-2 top-1 left-1 border-white shadow-custom-heavy z-10"></div>
-  //         {logos.map((logo, index) => (
-    //           <div
-    //             key={index}
-    //             className="flex justify-center items-center w-full h-24 p-5 xl:p-24 border border-gray-200"
-    //           >
-    //             <Image src={logo.src} alt={logo.alt} />
-    //           </div>
-    //         ))}
-    //       </div>
-    //     </div>
-    //   );
-    // }
-    
-    
-    "use client";
-    import lingen from "@/public/images/aboutUs/partners/image28.png";
-    import united from "@/public/images/aboutUs/partners/image32.png";
-    import browiner from "@/public/images/aboutUs/partners/image41.png";
-    import dollar from "@/public/images/aboutUs/partners/image42.png";
-    import mindray from "@/public/images/aboutUs/partners/image3.png";
-    import zoncare from "@/public/images/aboutUs/partners/image27.png";
+"use client";
+import lingen from "@/public/images/aboutUs/partners/image28.png";
+import united from "@/public/images/aboutUs/partners/image32.png";
+import browiner from "@/public/images/aboutUs/partners/image41.png";
+import dollar from "@/public/images/aboutUs/partners/image42.png";
+import mindray from "@/public/images/aboutUs/partners/image3.png";
+import zoncare from "@/public/images/aboutUs/partners/image27.png";
 
 import { useState } from "react";
 import Slider from "react-slick";
@@ -38,7 +15,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Sertificates() {
+export default function Partners() {
   const logos = [
     { src: lingen, alt: "Lingen Logo" },
     { src: united, alt: "United Imaging Logo" },
@@ -51,6 +28,7 @@ export default function Sertificates() {
   const settings = {
     infinite: true,
     speed: 500,
+    arrows: false,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
@@ -86,7 +64,7 @@ export default function Sertificates() {
   return (
     <div className="w-full max-w-[1440px] flex flex-col gap-10 mx-auto">
       <h2 className="text-3xl font-semibold max-mdl:text-2xl">
-        НАШИ ПАРТНЕРЫ 
+        НАШИ ПАРТНЕРЫ
       </h2>
       <div>
         <Slider {...settings} className="h-auto flex">
@@ -104,15 +82,6 @@ export default function Sertificates() {
             </div>
           ))}
         </Slider>
-      </div>
-
-      <div className="w-full justify-center flex">
-        <Link
-          href="/licenses"
-          className="border border-neutral-300 px-12 py-3 transition-all duration-200"
-        >
-          Смотреть все
-        </Link>
       </div>
     </div>
   );
