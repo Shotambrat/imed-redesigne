@@ -17,8 +17,8 @@ export default function NewCard({ key, title, date, imageSrc }) {
           {title}
         </h3>
         <Link href={`/news/`}>
-            <GreenArrow title={"Подробнее"} />
-          </Link>
+          <GreenArrow title={"Подробнее"} />
+        </Link>
       </div>
     </div>
   )

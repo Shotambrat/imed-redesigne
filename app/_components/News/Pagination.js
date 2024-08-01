@@ -25,7 +25,7 @@ export default function Pagination({ currentPage, totalPages, onPageChange }) {
                         <li key={index}>
                             <button
                                 onClick={() => handlePageChange(index + 1)}
-                                className={`px-4 text-[16px] mdx:text-[20px] py-2 rounded-3xl mx-1 ${currentPage === index + 1 ? 'bg-greentxt text-white' : 'bg-white text-gray-400'}`}
+                                className={`px-4 text-[16px] mdx:text-[20px] py-2 rounded-3xl mx-1 ${currentPage === index + 1 ? 'bg-contactBg text-white' : 'bg-white text-gray-400'}`}
                             >
                                 {index + 1}
                             </button>

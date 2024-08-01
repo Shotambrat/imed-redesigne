@@ -1,10 +1,9 @@
+import MainPartners from "@/app/_components/Partners/MainPartners";
 import Map from "@/app/_components/About/Map";
-import MainPartners from "@/app/_components/Partners/MainPartners.js";
 
-
-export default function page() {
+export default function PartnerPage() {
     return (
-        <div >
+        <div>
             <MainPartners />
             <Map />
         </div>

@@ -2,7 +2,7 @@
 "use client";
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { partners } from "@/app/_components/Partners/ListPartners.js";
+import { partners } from "@/app/_components/Partners/ListPartners";
 import partnerPhoto from "@/public/images/aboutUs/partners/image3.png";
 
 export default function PartnerPage() {

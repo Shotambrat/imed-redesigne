@@ -6,11 +6,11 @@ export default function NewsTitle() {
         <div className="w-full max-w-[832px] mx-auto flex flex-col  gap-1 px-4 ">
             <div className=" mt-4 ">
                 <p className="text-gray-400 text-[16px] mdx:text-[18px] xl:text-[20px]">12 June</p>
-                <h1 className="text-[25px] text-black mb-2 mdx:text-[34px] xl:text-[40px] ">Advances in Medical Imaging Technology</h1>
+                <h1 className="text-[25px] text-black mb-2 mdx:text-[34px] xl:text-[40px] leading-[1.10] uppercase">Мастер класс: актуальные вопросы ультразвуковой диагностики пренатальном периоде и в гинекологии</h1>
+
             </div>
             <div >
-                <p className="text-[16px] mdx:text-[20px]">Recent developments in medical imaging technology are transforming diagnostic capabilities and patient outcomes. According to a recent article in The Lancet, innovations such as AI-driven imaging analysis and high-resolution ultrasound are significantly enhancing the accuracy and speed of diagnosis. AI algorithms can now detect anomalies in imaging results that might be overlooked by the human eye, thereby improving early detection rates of diseases like cancer. High-resolution ultrasound, on the other hand, is providing clearer images of soft tissues, which is crucial for diagnosing conditions like liver fibrosis and cardiovascular diseases.
-                    Furthermore, The Lancet reports that integrating these technologies into standard medical practice requires robust training programs for medical professionals to ensure they can effectively utilize these tools. The potential of these technologies to revolutionize healthcare is immense, promising not only better diagnostic accuracy but also more personalized patient care.</p>
+                <p className="text-[16px] mdx:text-[20px]">В современном мире ультразвуковая диагностика играет ключевую роль в пренатальном периоде и гинекологии. Для повышения квалификации специалистов в этой области, 25 июля 2024 года в Ташкенте состоится мастер-класс на тему «Актуальные вопросы ультразвуковой диагностики в пренатальном периоде и гинекологии».</p>
             </div>
             <div className="xl:mt-7 xl:mb-[80px] flex flex-row justify-center">
                 <Image
@@ -18,45 +18,67 @@ export default function NewsTitle() {
                     width={500}
                     height={500}
                     alt={`News Image`}
-                    className="w-full h-auto max-w-[832px] max-h-[450px] object-cover rounded-3xl"
+                    className="w-full h-auto max-w-[832px] max-h-[450px] object-cover rounded-xl"
                 />
             </div>
             <div>
-                <h2 className="text-[20px] mdx:text-[27px]">Impact on Healthcare</h2>
-                <p className="text-[16px] mdx:text-[20px]">The continuous advancements in medical imaging technology are significantly impacting the healthcare industry. Improved diagnostic accuracy leads to earlier detection of diseases, enabling timely and effective treatments. Enhanced imaging capabilities also contribute to better patient management, reducing the need for invasive procedures and hospital stays
+                <h2 className="text-[20px] mdx:text-[27px] font-semibold mb-[20px] text-[#252324]">Приглашенные эксперты</h2>
+                <p className="text-[16px] mdx:text-[20px]">Озерская Ирина Аркадьевна - доктор  медицинских наук, профессор кафедры ультразвуковой диагностики и хирургии ФПК МР ФГБОУ ВПО «Российский университет дружбы народов» Минобрнауки России (г. Москва).
+                </p>
+                <p className="text-[16px] mdx:text-[20px] mt-[20px]">Батаева Роза Саидовна - Главный врач ЦМП г. Москва, Доцент кафедры УЗД ФГБОУ ДПО РМАНПО, Амбассадор и международный лектор ISUOG
                 </p>
             </div>
             <div className="mt-[60px] mb-[140px]">
-                <ol className="list-decimal list-inside">
-                    <li className="text-[20px] mdx:text-[27px]">Artificial Intelligence (AI) and Machine Learning</li>
-                    <p className="text-[16px] mdx:text-[20px]">AI and machine learning algorithms are revolutionizing medical imaging by enabling faster and more accurate analysis of images. These technologies assist radiologists in detecting abnormalities, such as tumors or fractures, with greater precision and efficiency. AI-powered imaging tools are also capable of predicting patient outcomes and aiding in personalized treatment planning</p>
-                    <li className="text-[20px] mdx:text-[27px] mt-[60px]">High-Resolution Imaging</li>
-                    <p className="text-[16px] mdx:text-[20px]">AI and machine learning algorithms are revolutionizing medical imaging by enabling faster and more accurate analysis of images. These technologies assist radiologists in detecting abnormalities, such as tumors or fractures, with greater precision and efficiency. AI-powered imaging tools are also capable of predicting patient outcomes and aiding in personalized treatment planning</p>
-                    <div className="mt-[30px] mb-[10px] flex flex-row justify-center">
-                        <Image
-                            src={newsPhoto}
-                            width={500}
-                            height={500}
-                            alt={`News Image`}
-                            className="w-full h-auto max-w-[832px] max-h-[450px] object-cover rounded-3xl"
-                        />
-                    </div>
-                    <li className="text-[20px] mt-[60px] mdx:text-[27px]">3D and 4D Imaging</li>
-                    <p className="text-[16px] mdx:text-[20px]">AI and machine learning algorithms are revolutionizing medical imaging by enabling faster and more accurate analysis of images. These technologies assist radiologists in detecting abnormalities, such as tumors or fractures, with greater precision and efficiency. AI-powered imaging tools are also capable of predicting patient outcomes and aiding in personalized treatment planning</p>
-                    <div className="mt-[30px] mb-[10px] flex flex-row justify-center">
-                        <Image
-                            src={newsPhoto}
-                            width={500}
-                            height={500}
-                            alt={`News Image`}
-                            className="w-full h-auto max-w-[832px] max-h-[450px] object-cover rounded-3xl"
-                        />
-                    </div>
-
+                <h3 className="text-[20px] mdx:text-[27px] font-semibold mb-[16px] text-[#252324]">Основными темами мастер-класса станут</h3>
+                <ol className="list-disc pl-4 mdx:pl-5">
+                    <li className="text-[16px] mdx:text-[20px]">Пренатальная ультразвуковая диагностика: новейшие подходы и технологии.</li>
+                    <li className="text-[16px] mdx:text-[20px] ">Оценка состояния плода и диагностика врожденных аномалий.</li>
+                    <li className="text-[16px] mdx:text-[20px] ">Применение ультразвука в гинекологии: от диагностики до лечения.</li>
                 </ol>
+                <div className="mt-[60px]">
+                    <h3 className="text-[20px] mdx:text-[24px] font-semibold mb-[16px] text-[#252324]">Пренатальная ультразвуковая диагностика: новейшие подходы и технологии</h3>
+                    <p className="text-[16px] mdx:text-[20px]">Обзор современных технологий в ультразвуковой диагностике.
+                        Применение 3D и 4D ультразвука в пренатальной диагностике.
+                        Использование доплеровского исследования для оценки состояния плода</p>
+                </div>
+                <div className="mt-[30px] mb-[10px] flex flex-row justify-center">
+                    <Image
+                        src={newsPhoto}
+                        width={500}
+                        height={500}
+                        alt={`News Image`}
+                        className="w-full h-auto max-w-[832px] max-h-[450px] object-cover rounded-xl"
+                    />
+                </div>
+                <h3 className="text-[20px] mt-[60px] mdx:text-[27px] mb-[16px] font-semibold">Оценка состояния плода и диагностика врожденных аномалий</h3>
+                <p className="text-[16px] mdx:text-[20px]">Основные параметры оценки развития плода.
+                    Диагностика хромосомных и структурных аномалий.
+                    Ранние признаки патологий и их интерпретация</p>
+                <div className="mt-[30px] mb-[10px] flex flex-row justify-center">
+                    <Image
+                        src={newsPhoto}
+                        width={500}
+                        height={500}
+                        alt={`News Image`}
+                        className="w-full h-auto max-w-[832px] max-h-[450px] object-cover rounded-xl"
+                    />
+                </div>
+                <h3 className="text-[20px] mt-[60px] mdx:text-[27px] mb-[16px] font-semibold">Применение ультразвука в гинекологии: от диагностики до лечения</h3>
+                <p className="text-[16px] mdx:text-[20px]">Ультразвуковая диагностика воспалительных заболеваний органов малого таза.
+                    Диагностика и мониторинг эндометриоза и миом матки.
+                    Ультразвуковое исследование в постменопаузальном периоде</p>
+                <div className="mt-[30px] mb-[10px] flex flex-row justify-center">
+                    <Image
+                        src={newsPhoto}
+                        width={500}
+                        height={500}
+                        alt={`News Image`}
+                        className="w-full h-auto max-w-[832px] max-h-[450px] object-cover rounded-xl"
+                    />
+                </div>
             </div>
             <div className="mdl:flex mdl:justify-center">
-                
+
             </div>
         </div>
     );

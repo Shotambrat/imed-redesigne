@@ -7,27 +7,27 @@ export default function News() {
   const data = [
     {
       title: "The Future of Telemedicine and Remote Patient Monitoring",
-      date: "12 June",
+      date: "12 Июня",
       imageSrc: newsPhoto,
       slug: "telemedicine",
     },
     {
       title:
         "The Impact of Portable Medical Devices on Healthcare Accessibility",
-      date: "12 June",
+      date: "12 Июня",
       imageSrc: newsPhoto,
       slug: "medical-devices",
     },
     {
       title: "The Future of Telemedicine and Remote Patient Monitoring",
-      date: "12 June",
+      date: "12 Июня",
       imageSrc: newsPhoto,
       slug: "telemedicine",
     },
     {
       title:
         "Children's health: Vaccination and prevention of infectious diseases",
-      date: "12 June",
+      date: "12 Июня",
       imageSrc: newsPhoto,
       slug: "children",
     },
@@ -35,7 +35,7 @@ export default function News() {
 
   return (
     <div className="w-full max-w-[1440px] mx-auto px-2 flex flex-col gap-8 mb-[150px] mt-[150px] mdx:mt-[190px] xl:mt-[230px]">
-      <h2 className="text-3xl max-mdx:text-2xl font-semibold">Other News</h2>
+      <h2 className="text-3xl max-mdx:text-2xl font-semibold uppercase">Другие новости</h2>
       <div className="w-full grid gap-4 grid-cols-1 mdl:grid-cols-2 xl:grid-cols-4 h-auto">
         {data.map((item, i) => {
           return (
@@ -53,9 +53,9 @@ export default function News() {
       <div className="flex w-full justify-center">
         <Link
           href="/news"
-          className="border py-3 px-12 hover:bg-green-200 hover:border-greenView transition-all duration-200 rounded-xl"
+          className="border-1 border py-3 px-12 hover:bg-[#E94B50] hover:text-[#FFF] transition-all duration-200 "
         >
-          <GreenArrow title={"View all"} />
+          Все новости
         </Link>
       </div>
     </div>

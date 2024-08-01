@@ -34,7 +34,6 @@ const partners = [
         description: "Lingen Precision Medical Products Co., Ltd. is a unique manufacturer specializing in medical products",
         link: "lingen"
     },
-    // Add more partners as needed...
 ];
 
 export default function ListPartners() {
