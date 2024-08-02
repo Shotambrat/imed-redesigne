@@ -57,7 +57,7 @@ export default function ContAddress() {
                                 className={`block w-full px-3 py-3 bg-contactBg placeholder-transparent focus:outline-none border-b-2 ${focusedInput === field
                                     ? validateInput(field, values[field]).isValid
                                         ? "border-white"
-                                        : "border-red-500"
+                                        : "border-white"
                                     : "border-white"
                                     }`}
                                 placeholder={

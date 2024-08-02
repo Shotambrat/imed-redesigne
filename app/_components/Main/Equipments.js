@@ -40,8 +40,8 @@ export default function Equipments() {
         ))}
       </div>
       <div className="w-full flex justify-center">
-        <Link href={'/categories'} className=" border border-neutral-300 px-12 py-3 transition-all duration-200">
-            Все категории
+        <Link href={'/categories'} className=" border border-neutral-300 px-12 py-3 transition-all hover:text-white hover:bg-[#E94B50] duration-200">
+          Все категории
         </Link>
       </div>
     </div>
